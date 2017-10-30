@@ -5,5 +5,6 @@ xhr.open("GET", chrome.extension.getURL('https://www.reddit.com/api/me.json'), t
 xhr.send();
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.browserAction.setBadgeText({"0"});
-}
+  // Badge won't be able to disply more than three characters :(
+  chrome.browserAction.setBadgeText({text:"0"});
+});
